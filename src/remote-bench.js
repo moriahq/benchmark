@@ -29,14 +29,14 @@ const runTest = async (opts, serverName, benchmarks) => {
 
       spinner.text = `Results saved for ${testName}`;
       spinner.succeed();
-
-      return results;
     } catch (error) {
       spinner.text = `Failed saved for ${testName}`;
       spinner.fail();
       console.error(error);
     }
   }
+
+  return results;
 };
 
 const start = async (opts, servers, benchmarks, data = [], index = 0) => {
