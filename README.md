@@ -143,3 +143,12 @@ You can track the progress of this project [here][project].
 [npm-permissions]: https://docs.npmjs.com/getting-started/fixing-npm-permissions
 [postgres]: https://www.postgresql.org/download/
 [postgres-app]: https://postgresapp.com
+
+## Proxima Part
+
+### run on linux server using docker
+
+```
+docker run -it --rm --name parse-benchmark -v "$PWD":/usr/src/app -w /usr/src/app node:16 yarn
+docker run -it --rm --name parse-benchmark -v "$PWD":/usr/src/app -w /usr/src/app node:16 yarn start
+```

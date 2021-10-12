@@ -34,9 +34,10 @@
     "autocannon": "4.0.0",
     "cli-table": "0.3.1",
     "commander": "3.0.0",
+    "dotenv": "^10.0.0",
     "inquirer": "6.5.1",
     "ora": "3.4.0",
-    "parse-server": "github:parse-community/parse-server#master",
+    "parse-server": "4.10.4",
     "pidusage": "2.0.17",
     "probot": "9.3.1"
   },
@@ -64,6 +65,6 @@
     ]
   },
   "engines": {
-    "node": "8"
+    "node": "16"
   }
 }
