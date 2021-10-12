@@ -7,13 +7,15 @@ const PARSE_CONFIG = require('./config');
 
 function cliTable(data) {
   const table = new Table({
-    head: ['', 'Requests/s', 'Latency', 'Throughput/Mb', 'Ram', 'Cpu %'],
+    head: ['', 'Requests/s', 'Errors', '4xx', 'Latency', 'Throughput/Mb', 'Ram', 'Cpu %'],
   });
   const rows = data.map((result) => {
     const key = Object.keys(result)[0];
     return [
       key,
       (result[key].requests.average).toFixed(1),
+      (result[key].non2xx),
+      (result[key]['4xx']),
       (result[key].latency.average).toFixed(2),
       (result[key].throughput.average / 1024 / 1024).toFixed(2),
       bytesToSize(result[key].memory),

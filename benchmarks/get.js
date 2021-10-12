@@ -9,7 +9,7 @@ module.exports = {
     await object.save();
 
     return [{
-      path: `/classes/TestObject/${object.id}`,
+      path: `/parse/classes/TestObject/${object.id}`,
       method: 'GET',
     }];
   }
